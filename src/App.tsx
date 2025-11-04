@@ -1,12 +1,14 @@
+import { faker } from '@faker-js/faker';
 import './App.css'
 
-function App() {
+const words = faker.word.words(10)
 
-  return (
-    <>
-      <div className='text-4xl text-center text-primary'>It works</div>
-    </>
-  )
+function App() {
+  return <GenerateWords words={words} />
+}
+
+const GenerateWords = ({words}: {words: string}) =>{
+  return <div className='text-4xl text-center text-slate-500'>{words}</div>
 }
 
 export default App
